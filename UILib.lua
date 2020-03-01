@@ -13,9 +13,6 @@ local function saveConfig()
 end;
 
 local owlLibGui = game:GetObjects("rbxassetid://4530443679")[1];
-if syn then
-	syn.protect_gui(owlLibGui);
-end;
 owlLibGui.Parent = game:GetService("CoreGui");
 local mainFrame = owlLibGui.mainFrame;
 
