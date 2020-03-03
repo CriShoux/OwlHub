@@ -15,14 +15,14 @@ end;
 local oldScript = script;
 local popupGui = game:GetObjects("rbxassetid://4743303040")[1];
 popupGui.Parent = game:GetService("CoreGui");
-popupGui.Name = httpService:GenerateGUID();
+popupGui.Name = httpService:GenerateGUID(false);
 script = popupGui.mainScript;
 local popup = loadstring(popupGui.mainScript.Source)();
 script = oldScript;
 
 local owlLibGui = game:GetObjects("rbxassetid://4530443679")[1];
 owlLibGui.Parent = game:GetService("CoreGui");
-owlLibGui.Name = httpService:GenerateGUID();
+owlLibGui.Name = httpService:GenerateGUID(false);
 local mainFrame = owlLibGui.mainFrame;
 
 local tweenService = game:GetService("TweenService");
