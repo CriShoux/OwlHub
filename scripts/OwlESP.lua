@@ -63,8 +63,8 @@ function OwlESP.new(data)
         tracer.To = newVector2(rootPos.X, rootPos.Y - espBox.Size.Y / 2);
         name.Position = newVector2(rootPos.X, (rootPos.Y + espBox.Size.Y / 2) - 25);
 
-        espBox.Visible = espBoxVisible and visible or false;
-        tracer.Visible = tracerVisible and visible or false;
+        espBox.Visible = espBoxVisible and visible;
+        tracer.Visible = tracerVisible and visible;
         name.Visible = visible;
     end;
 
@@ -109,8 +109,8 @@ function OwlESP:update()
             name.Text = text;
             name.Color = espColor;
 
-            espBox.Visible = espBoxVisible and visible or false;
-            tracer.Visible = tracerVisible and visible or false;
+            espBox.Visible = espBoxVisible and visible;
+            tracer.Visible = tracerVisible and visible;
             name.Visible = visible;
         else
             espBox.Visible = false;
