@@ -62,9 +62,9 @@ function OwlESP:new(data)
         tracer.To = newVector2(rootPos.X, rootPos.Y - espBox.Size.Y / 2);
         name.Position = newVector2(rootPos.X, (rootPos.Y + espBox.Size.Y / 2) - 25);
 
-        espBox.Visible = espBoxVisible and true or false;
-        tracer.Visible = tracerVisible and true or false;
-        name.Visible = true;
+        espBox.Visible = espBoxVisible and visible or false;
+        tracer.Visible = tracerVisible and visible or false;
+        name.Visible = visible;
     end;
 
     self.espBox = {espBox, espBoxVisible};
@@ -96,7 +96,7 @@ function OwlESP:update()
         local rootPos, rootVis = worldToViewportPoint(currentCamera, rootPart.Position);
         local headPos = worldToViewportPoint(currentCamera, head.Position + headOffset);
         local legPos = worldToViewportPoint(currentCamera, rootPart.Position - legOffset);
-        local visible = (not self.teamCheck and true) or (plr.TeamColor ~= localPlayer.TeamColor);
+        local visible = (self.teamCheck and plr.TeamColor ~= localPlayer.TeamColor) or true;
 
         if rootVis then
             espBox.Size = newVector2(2350 / rootPos.Z, headPos.Y - legPos.Y);
@@ -108,9 +108,9 @@ function OwlESP:update()
             name.Text = text;
             name.Color = espColor;
 
-            espBox.Visible = espBoxVisible and true or false;
-            tracer.Visible = tracerVisible and true or false;
-            name.Visible = true;
+            espBox.Visible = espBoxVisible and visible or false;
+            tracer.Visible = tracerVisible and visible or false;
+            name.Visible = visible;
         else
             espBox.Visible = false;
             tracer.Visible = false;
