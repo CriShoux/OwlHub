@@ -24,6 +24,7 @@ function OwlESP:new(data)
         teamCheck = data.teamCheck or false;
     }, {__index = OwlESP});
 
+    local plr = data.plr;
     local espBoxVisible = data.espBoxVisible;
     local tracerVisible = data.tracerVisible;
     local text = data.text;
