@@ -82,7 +82,7 @@ function OwlESP:setTracer(visible)
     self.tracer[2] = visible;
 end;
 
-function OwlESP:setName(text)
+function OwlESP:setText(text)
     self.name[2] = text;
 end;
 
