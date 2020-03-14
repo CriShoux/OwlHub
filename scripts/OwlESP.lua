@@ -101,11 +101,12 @@ function OwlESP:update()
 
         if rootVis then
             espBox.Size = newVector2(2350 / rootPos.Z, headPos.Y - legPos.Y);
-            espBox.Position = newVector2(rootPos.X - espBox.Size.X / 2, rootPos.Y - espBox.Size.Y / 2);
+            local espBoxSize = espBox.Size;
+            espBox.Position = newVector2(rootPos.X - espBoxSize.X / 2, rootPos.Y - espBoxSize.Y / 2);
             espBox.Color = espColor;
-            tracer.To = newVector2(rootPos.X, rootPos.Y - espBox.Size.Y / 2);
+            tracer.To = newVector2(rootPos.X, rootPos.Y - espBoxSize.Y / 2);
             tracer.Color = espColor;
-            name.Position = newVector2(rootPos.X, (rootPos.Y + espBox.Size.Y / 2) - 25);
+            name.Position = newVector2(rootPos.X, (rootPos.Y + espBoxSize.Y / 2) - 25);
             name.Text = text;
             name.Color = espColor;
 
