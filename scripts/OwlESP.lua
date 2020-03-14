@@ -25,11 +25,10 @@ function OwlESP.new(data)
     }, {__index = OwlESP});
 
     local plr = data.plr;
+    local char = self.char;
     local espBoxVisible = data.espBoxVisible;
     local tracerVisible = data.tracerVisible;
     local text = data.text;
-
-    local char = self.char;
 
     if not char then return; end;
 
@@ -90,10 +89,9 @@ end;
 function OwlESP:update()
     local plr, char, espBox, tracer, name = self.plr, self.char, self.espBox[1], self.tracer[1], self.name[1];
     local espBoxVisible, tracerVisible, text, espColor = self.espBox[2], self.tracer[2], self.name[2], self.espColor;
-    
-    if char:FindFirstChild("HumanoidRootPart") and char:FindFirstChild("Head") then
-        local rootPart = char.HumanoidRootPart;
-        local head = char.Head;
+    local rootPart, head = char:FindFirstChild("HumanoidRootPart"), char:FindFirstChild("Head");
+
+    if rootPart and head then
         local rootPos, rootVis = worldToViewportPoint(currentCamera, rootPart.Position);
         local headPos = worldToViewportPoint(currentCamera, head.Position + headOffset);
         local legPos = worldToViewportPoint(currentCamera, rootPart.Position - legOffset);
