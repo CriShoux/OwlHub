@@ -13,7 +13,7 @@ local headOffset = newVector3(0, 0.5, 0);
 local legOffset = newVector3(0, 3, 0);
 local tracerStart = newVector2(currentCamera.ViewportSize.X / 2, currentCamera.ViewportSize.Y);
 
-function OwlESP:new(data)
+function OwlESP.new(data)
     local self = setmetatable({
         plr = data.plr,
         char = data.plr.Character,
