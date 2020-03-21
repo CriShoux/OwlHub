@@ -30,7 +30,7 @@ local inputService = game:GetService("UserInputService");
 
 local firstBodyFrame;
 local startPos;
-local draggableToggle;
+local dragging = false;
 local draggableInput;
 local draggableStart;
 
