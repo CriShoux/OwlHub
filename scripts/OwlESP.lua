@@ -64,7 +64,7 @@ function OwlESP.new(data)
 
         espBox.Visible = espBoxVisible and visible;
         tracer.Visible = tracerVisible and visible;
-        name.Visible = visible;
+        name.Visible = espBoxVisible and visible;
     end;
 
     self.espBox = {espBox, espBoxVisible};
