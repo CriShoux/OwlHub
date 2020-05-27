@@ -84,5 +84,8 @@
     "4850830209": {"Name": "RB World 3", "Script": "RBWorld3.lua"},
     "261290060": {"Name": "Terminal Railways", "Script": "TerminalRailways.lua"},
     "2555870920": {"Name": "AceOfSpadez", "Script": "AceOfSpadez.lua"},
-    "606849621": {"Name": "Jailbreak", "Script": "Jailbreak.lua"}
+    "606849621": {"Name": "Jailbreak", "Script": "Jailbreak.lua"},
+    "2377868063": {"Name": "Strucid", "Script": "Strucid.lua"},
+    "3606833500": {"Name": "Strucid", "Script": "Strucid.lua"},
+    "2674164583": {"Name": "Strucid", "Script": "Strucid.lua"}
 }
